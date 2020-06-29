@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  music_store_id: 1
+  instrument_id: 1
+  customer_id: 1
+  name: MyString
+  address: MyString
+
+two:
+  music_store_id: 1
+  instrument_id: 1
+  customer_id: 1
+  name: MyString
+  address: MyString
