@@ -1,0 +1,2 @@
+class MusicStoresController < ApplicationController
+end
