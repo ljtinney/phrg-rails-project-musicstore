@@ -4,8 +4,8 @@ class CreatePurchases < ActiveRecord::Migration[6.0]
       t.integer :music_store_id
       t.integer :instrument_id
       t.integer :customer_id
-      t.string :name
-      t.string :address
+      t.string :cost
+      t.string :payment_type
 
       t.timestamps
     end
