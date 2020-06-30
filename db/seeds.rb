@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Heroine.destroy_all
+# Heroine.destroy_all
 Instrument.destroy_all
 
 instruments = [
@@ -17,8 +17,6 @@ instruments = [
 
   { instrument_type: "electric guitar", name: "FSR Two Tone", make: "Gretsch", model: "Electromatic Double Jet", color: "Surf Green & White", year_made: 2020},
 
-
-
   { instrument_type: "acoustic guitar", name: "Standard", make: "Gibson", model: "Hummingbird", color: "Cherry Sunburst", year_made: 1972 },
 
   { instrument_type: "acoustic guitar", name: " 224ce-K DLX", make: "Taylor", model: "Grand Auditorium Acoustic-Electric", color: "Shaded Edge Burst", year_made: 2018 },
@@ -27,16 +25,13 @@ instruments = [
 
   { instrument_type: "acoustic guitar", name: "17 Series-000-17E", make: "Martin", model: "Auditorium Acoustic-Electric", color: "Whiskey Sunset", year_made: 2009 },
 
+  { instrument_type: "electric bass", name: "American", make: "Fender", model: "Precision Bass", color: "Vintage Sunburst", year_made: 1968 },
 
+  { instrument_type: "electric bass", name: "American Ultra", make: "Fender", model: "Jazz Bass", color: "Cobra Blue", year_made: 1982 },
 
+  { instrument_type: "electric bass", name: "JMJ Custom", make: "Fender", model: "Mustang Bass", color: "Daphne Blue", year_made: 2018 },
 
-  { instrument_type: "electric bass", name: "American", make: "Fender", model: "P-Bass", color: "Cherry Sunburst", year_made: 1972 },
-
-  { instrument_type: "electric bass", name: "Ameican", make: "Fender", model: "Jazz Bass", color: "Cherry Sunburst", year_made: 1972 },
-
-  { instrument_type: "electric bass", name: "JMJ Custom", make: "Fender", model: "Mustang Bass", color: "Cherry Sunburst", year_made: 1972 },
-
-  { instrument_type: "electric bass", name: "Standard", make: "Fender", model: "Hummingbird", color: "Cherry Sunburst", year_made: 1972 },
+  { instrument_type: "electric bass", name: "Music Man", make: "Ernie Ball", model: "Stingray", color: "Black", year_made: 1972 },
 
 
 
