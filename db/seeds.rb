@@ -1,35 +1,48 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
+Customer.destroy_all
 Instrument.destroy_all
 
-instruments = [
-  { instrument_type: "electric guitar", name: "90's Vintage Rock", make: "Fender", model: "Telecaster", color: "Spotted Atrocious Purple", year_made: 1992 },
-
-  { instrument_type: "electric guitar", name: "50's American Vintage Supreme", make: "Fender", model: "Stratocaster", color: "Daphne Blue", year_made: "1992" },
-
-  { instrument_type: "electric guitar", name: "Classic", make: "Gibson", model: "Les Paul", color: "Sunburst", year_made: 1992 },
-
-  { instrument_type: "electric guitar", name: "FSR Two Tone", make: "Gretsch", model: "Electromatic Double Jet", color: "Surf Green & White", year_made: 2020},
-
-  { instrument_type: "acoustic guitar", name: "Standard", make: "Gibson", model: "Hummingbird", color: "Cherry Sunburst", year_made: 1972 },
-
-  { instrument_type: "acoustic guitar", name: " 224ce-K DLX", make: "Taylor", model: "Grand Auditorium Acoustic-Electric", color: "Shaded Edge Burst", year_made: 2018 },
-
-  { instrument_type: "acoustic guitar", name: "D-45 Standard", make: "Martin", model: "Dreadnought", color: "Aged Toner", year_made: 2015 },
-
-  { instrument_type: "acoustic guitar", name: "17 Series-000-17E", make: "Martin", model: "Auditorium Acoustic-Electric", color: "Whiskey Sunset", year_made: 2009 },
-
-  { instrument_type: "electric bass", name: "American", make: "Fender", model: "Precision Bass", color: "Vintage Sunburst", year_made: 1968 },
-
-  { instrument_type: "electric bass", name: "American Ultra", make: "Fender", model: "Jazz Bass", color: "Cobra Blue", year_made: 1982 },
-
-  { instrument_type: "electric bass", name: "JMJ Custom", make: "Fender", model: "Mustang Bass", color: "Daphne Blue", year_made: 2018 },
-
-  { instrument_type: "electric bass", name: "Music Man", make: "Ernie Ball", model: "Stingray", color: "Black", year_made: 1972 },
+DATA = {
+  cust_keys: %w[first_name last_name username password],
+  customers: [
+    ["Max", "Charles", "ConeBone69", "password"],
+    ["Katy", "Perry", "KP33", "password"],
+    ["Megan", "Fox", "FoxyLady123", "password"],
+    ["Brian", "May", "KingOfQueen" "password"],
+    ["Jeff", "Buckley","LESpizzaguy" "password"],
+    ["Bruce", "Springsteen", "BossManInUSA", "password"],
+    ["Emma", "Roberts", "NotJulia924", "password"],
+    ["April", "O'Neil", "YellowSuitNews", "password"],
+    ["Julia", "Roberts", "PrettyWomanOceans", "password"],
+    ["Alex", "D'Addario", "IASIPsuperPhan", "password"],
+    ["Seth", "Rogen", "EfficientPineapple", "password"],
+    ["Darth", "Maul", "SithRuleGalaxy3" "password"],
+    ["Nic", "Cage", "PressleyGone34" "password"],
+    ["Sara", "Malakul-Lane", "23Tequillas" "password"],
+  ]
+  instrument_keys: %w[instrument_type name make model color year_made],
+  instruments: [
+["electric guitar", "90's Vintage Rock", "Fender", "Telecaster", "Spotted Atrocious Purple", 1992],
+["electric guitar", "50's American Vintage", "Fender", "Stratocaster", "Daphne Blue", 1956],
+["electric guitar", "Classic", "Gibson", "Les Paul", "Sunburst", 1992],
+["electric guitar", "FSR Two Tone", "Gretsch", "Electromatic Double Jet", "Surf Green & White", 2020],
+["acoustic guitar", "Standard", "Gibson", "Hummingbird", "Cherry Sunburst", 1972],
+["acoustic guitar", "224ce-K DLX", "Taylor", "Grand Auditorium Acoustic-Electric", "Shaded Edge Burst", 2018],
+["acoustic guitar", "D-45 Standard", "Martin", "Dreadnought", "Aged Toner", 2015],
+["acoustic guitar", "17 Series-000-17E", "Martin", "Auditorium Acoustic-Electric", "Whiskey Sunset", 2009],
+["electric bass", "American", "Fender", "Precision Bass", "Vintage Sunburst", 1968],
+["electric bass", "American Ultra", "Fender", "Jazz Bass", "Cobra Blue", 1982],
+["electric bass", "JMJ Custom", "Fender", "Mustang Bass", "Daphne Blue", 2018],
+["electric bass", "Music Man", "Ernie Ball", "Stingray", "Black", 1972],
 ]
+
+def make_customers
+  DATA[:customers].each do |customer|
+    new_customer = Customer.new
+    customer.each_with_index do |attribute, i|
+      new_customer.send(DATA[:cust_keys][i] + "=", attribute)
+    end
+    new_customer.save
+  end
+end
+
+instruments.each { |instrument_attributes| Instrument.create(instrument_attributes) }
