@@ -32,3 +32,4 @@ instruments = [
   { instrument_type: "electric bass", name: "JMJ Custom", make: "Fender", model: "Mustang Bass", color: "Daphne Blue", year_made: 2018 },
 
   { instrument_type: "electric bass", name: "Music Man", make: "Ernie Ball", model: "Stingray", color: "Black", year_made: 1972 },
+]
