@@ -44,6 +44,9 @@ Lint/ScriptPermission:
 Lint/StructNewOverride:
   Enabled: true
 
+Layout/LineLength:
+  Max: 180
+
 Metrics/AbcSize:
   Max: 20
 

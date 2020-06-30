@@ -1,1 +1,6 @@
-<h1>Welcome to MusicStore</h1>
+<h1>Welcome to Get Your GEET MusicStore</h1>
+<br>
+<h3>Which type of instrument are you looking for today?</h3>
+<br>
+<br>
+  <%= f.collection_select :instrument_type, Instrument.order(:name),:id,:name, include_blank: true %>
