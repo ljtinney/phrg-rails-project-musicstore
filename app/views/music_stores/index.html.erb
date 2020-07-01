@@ -1,5 +1,12 @@
-<h1>Welcome to GET YOUR GEETS Independent MusicStore</h1>
+<h1>Welcome to GIT YOUR GEETS Independent MusicStore</h1>
+<h3>Wanna GIT A GEET?</h3>
 <br>
-<h3>Which type of instrument are you looking to purchase today?</h3>
+<h4>Please Login</h4>
+<%= form_tag '/login' do %>
+   <%= submit_tag "Login"%>
+<% end %>
 <br>
-<br>
+<h4>Or... SignUp</h4>
+<%= form_tag "/customers/new" do %>
+<%= submit_tag "SignUp"%>
+<% end %>
