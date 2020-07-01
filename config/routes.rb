@@ -8,4 +8,7 @@ Rails.application.routes.draw do
   resources :music_stores, only: [:index, :new, :show, :create]
   # resources :purchases, only: [:index, :new, :show, :create]
 
+  get "login", to: "sessions#new"
+  post "login", to: "sessions#create"
+  get "signup", to: "sessions#create"
 end
