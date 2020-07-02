@@ -5,6 +5,5 @@ class Customer < ApplicationRecord
   has_many :instruments, through: :purchases
   has_many :music_stores, through: :purchases
 
-  validates :username, presence: true, uniqueness: true
-  validates :username, presence: true, uniqueness: true
+  validates :name, presence: true, uniqueness: true
 end
