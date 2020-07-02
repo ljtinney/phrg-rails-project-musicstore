@@ -6,9 +6,25 @@ class InstrumentsController < ApplicationController
     @customer = current_user
   end
 
-  def new
-    @instrument = Instrument.new
+  def show
+    @instrument = Instrument.find(params[:id])
   end
 
-  def show; end
+private
+
+  def customer
+    @customer ||= Customer.find(params[:customer_id])
+  end
+
+  def instrument_params
+    params.require(:instrument)
+          .permit(
+            :instrument_type,
+            :name,
+            :make,
+            :model,
+            :color,
+            :year_made
+          )
+  end
 end
