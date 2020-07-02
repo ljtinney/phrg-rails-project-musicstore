@@ -1,7 +1,7 @@
 <h1>Welcome to GIT YOUR GEETS Independent MusicStore</h1>
 <h3>Wanna GIT A GEET?</h3>
-<h4>Please, SignIn!</h4>
-<%= form_tag "/signin" do %>
-   <%= submit_tag "SignIn"%>
-<% end %>
+<h4>Returning Customers, Please SignIn</h4>
+<h4><%= link_to "Sign In", signin_path %></h4>
 <br>
+<h4>New Customers, SignUp</h4>
+<h4><%= link_to "Sign Up", new_customer_path %></h4>

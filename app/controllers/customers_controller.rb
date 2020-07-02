@@ -1,35 +1,28 @@
 class CustomersController < ApplicationController
   before_action :require_login
-
-  def index
-    @customers = Customer.all
-  end
+  skip_before_action :require_login, only: %i[new create]
 
   def new
     @customer = Customer.new
   end
 
-  def show; end
-
   def create
-    @customer = Customer.create(customer_params)
-    session[:customer_id] = @customer.id
-    redirect_to "/welcome"
+    customer = Customer.create(user_params)
+    session[:user_id] = customer.id
+
+    redirect_to customer_path(customer)
+  end
+
+  def show
+    @customer = Customer.find(params[:id])
+    redirect_to root_path unless session[:user_id].present?
   end
 
 private
 
-  def require_login
-    return unless session[:customer_id].nil?
-
-    redirect_to "/"
-  end
-
-  def customer_params
+  def user_params
     params.require(:customer).permit(
-      :first_name,
-      :last_name,
-      :username,
+      :name,
       :password
     )
   end

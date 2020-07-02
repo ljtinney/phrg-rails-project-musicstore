@@ -1,24 +1,25 @@
 class SessionsController < ApplicationController
   def new
+    @customer = Customer.new
   end
 
   def create
-    customer = Customer.find_by_username(params[:username])
-    if customer && customer.authenticate(params[:password])
-      session[:customer_id] = customer.id
-      redirect_to "music_stores/new", notice: "Logged in!"
+    if (@customer = Customer.find_by(name: params[:customer][:name]))
+      authenticated = @customer.authenticate(params[:customer][:password])
+      if authenticated
+        session[:user_id] = @customer.id
+
+        redirect_to customer_path(@customer)
+      else
+        redirect_to signin_path
+      end
     else
-      flash.now[:alert] = "Email or password is invalid"
-      render "new"
+      redirect_to root_path
     end
   end
 
-  def login; end
-
-  def welcome; end
-
   def destroy
-    session[:customer_id] = nil
-    redirect_to "music_store/new", notice: "Logged out!"
+    session.delete :user_id
+    redirect_to root_path
   end
 end

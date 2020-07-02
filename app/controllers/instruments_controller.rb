@@ -1,7 +1,14 @@
 class InstrumentsController < ApplicationController
-  def index; end
+  before_action :require_login
 
-  def new; end
+  def index
+    @instruments = Instrument.all
+    @customer = current_user
+  end
+
+  def new
+    @instrument = Instrument.new
+  end
 
   def show; end
 end

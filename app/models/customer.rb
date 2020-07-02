@@ -6,4 +6,5 @@ class Customer < ApplicationRecord
   has_many :music_stores, through: :purchases
 
   validates :username, presence: true, uniqueness: true
+  validates :username, presence: true, uniqueness: true
 end

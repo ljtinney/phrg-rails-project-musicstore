@@ -1,19 +1,15 @@
 <h1>Sessions#new</h1>
 
-<h2>Please SignIn</h2>
+<h3>Thanks For Coming Back!</h3>
+<h4>Please SignIn</h4>
 
-<%= form_tag signin_path do %>
-   <%= label_tag :first_name%>
-   <%= text_field_tag :first_name %><br>
-   <br>
-   <%= label_tag :last_name%>
-   <%= text_field_tag :last_name %><br>
-   <br>
-   <%= label_tag :username%>
-   <%= text_field_tag :username %><br>
-   <br>
-   <%= label_tag :password%>
-   <%= password_field_tag :password%><br>
-   <br>
-   <%= submit_tag "Start Shopping!"%>
+<%= form_for(@customer, url: signin_path) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <br>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <br>
+  <%= f.submit "Sign In" %>
 <% end %>
