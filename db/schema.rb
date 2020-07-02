@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_02_004113) do
+ActiveRecord::Schema.define(version: 2020_07_02_153248) do
 
   create_table "customers", force: :cascade do |t|
     t.string "password_digest"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2020_07_02_004113) do
     t.integer "year_made"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "music_store_id"
   end
 
   create_table "music_stores", force: :cascade do |t|

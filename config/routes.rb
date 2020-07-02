@@ -6,9 +6,9 @@ Rails.application.routes.draw do
 
   resources :sessions, only: [:new, :create, :destroy]
   resources :customers, only: [:new, :show, :create]
-  # resources :instruments, only: [:index, :new, :show, :create]
-  resources :music_stores, only: [:index, :new]
-  # resources :purchases, only: [:index, :new, :show, :create]
+  resources :instruments, only: [:index, :show]
+  resources :music_stores, only: [:index, :new, :show]
+  resources :purchases, only: [:index, :new, :show, :create]
 
   get "signin", to: "sessions#new"
   post "signin", to: "sessions#create"
