@@ -3,7 +3,7 @@ class InstrumentsController < ApplicationController
 
   def index
     @instruments = Instrument.all
-    @customer = current_user
+    # @customer = current_user
   end
 
   def show
@@ -11,10 +11,6 @@ class InstrumentsController < ApplicationController
   end
 
 private
-
-  def customer
-    @customer ||= Customer.find(params[:customer_id])
-  end
 
   def instrument_params
     params.require(:instrument)
