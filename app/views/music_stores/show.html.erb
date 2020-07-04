@@ -1,1 +1,20 @@
 <h1>Music Stores, baby...</h1>
+
+<h3>Music Store: <%= @music_store.name %> </h3>
+<p> Music Store Address: <%= @music_store.address %> </p>
+<p>Music Store Instruments:</p>
+<ul>
+  <% @music_store.instruments.each do |geet| %>
+    <li>
+      <%= geet.instrument_type %><br>
+      <%= geet.year_made %><br>
+      <%= geet.make %><br>
+      <%= geet.name %><br>
+      <%= geet.model %><br>
+      <%= geet.color %><br>
+      <br>
+      <br>
+    </li>
+    </li>
+  <% end %>
+</ul>

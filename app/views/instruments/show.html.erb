@@ -1,9 +1,13 @@
 <h1> instruments#show <h1>
 
-<p> Instrument Type: <%= @instrument.instrument_type %> </p>
-<p> Instrument Name: <%= @instrument.name %> </p>
-<p> Instrument Model: <%= @instrument.model %> </p>
-<p> Instrument Color: <%= @instrument.color %> </p>
-<p> Instrument Year Made: <%= @instrument.year_made %> </p>
-<p> Instrument Location: <%= link_to @instrument.music_store.name, music_store_path %> </p>
-<br>
+<% @instruments.each do |instrument| %>
+  <h4> Instrument Type: <%= instrument.instrument_type %> </h4>
+  <h4> Instrument Year Made: <%= instrument.year_made %> </h4>
+  <h4> Instrument Make: <%= instrument.make %> </h4>
+  <h4> Instrument Name: <%= instrument.name %> </h4>
+  <h4> Instrument Model: <%= instrument.model %> </h4>
+  <h4> Instrument Color: <%= instrument.color %> </h4>
+  <h4> Instrument Location: <%= link_to instrument.music_store.name, music_store_path(instrument.music_store) %> </h4>
+  <br>
+  <br>
+<% end %>
