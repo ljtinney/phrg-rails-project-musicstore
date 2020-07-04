@@ -22,6 +22,7 @@ class MusicStoresController < ApplicationController
 
   def show
     @music_store = MusicStore.find(params[:id])
+    @store_geets = @music_store.instruments
   end
 
 private

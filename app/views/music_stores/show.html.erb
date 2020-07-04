@@ -1,17 +1,18 @@
-<h1>Music Stores, baby...MusicStore#show View</h1>
+<h1>MusicStore#show View</h1>
 
 <h3>Music Store: <%= @music_store.name %> </h3>
 <p> Music Store Address: <%= @music_store.address %> </p>
 <p>Instruments In Stock At <%= @music_store.name %> </p>
 <ul>
-  <% @music_store.instruments.each do |geet| %>
+  <% @store_geets.each do |instrument| %>
     <li>
-      <%= geet.instrument_type %><br>
-      <%= geet.year_made %><br>
-      <%= geet.make %><br>
-      <%= geet.name %><br>
-      <%= geet.model %><br>
-      <%= geet.color %><br>
+      <%= instrument.instrument_type %><br>
+      <%= instrument.year_made %><br>
+      <%= instrument.make %><br>
+      <%= instrument.name %><br>
+      <%= instrument.model %><br>
+      <%= instrument.color %><br>
+      <%= link_to "Purchase Instrument", new_instrument_purchase_path(instrument) %>
       <br>
       <br>
     </li>

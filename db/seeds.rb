@@ -39,3 +39,8 @@ Instrument.create!(instrument_type: "electric bass", name: "American", make: "Fe
 Instrument.create!(instrument_type: "electric bass", name: "American Ultra", make: "Fender", model: "Jazz Bass", color: "Cobra Blue", year_made: 1982, music_store: music_store3)
 Instrument.create!(instrument_type: "electric bass", name: "JMJ Custom", make: "Fender", model: "Mustang Bass", color: "Daphne Blue", year_made: 2018, music_store: music_store1)
 Instrument.create!(instrument_type: "electric bass", name: "Music Man", make: "Ernie Ball", model: "Stingray", color: "Black", year_made: 1972, music_store: music_store2)
+
+PaymentType.create!(name: "credit")
+PaymentType.create!(name: "debit")
+PaymentType.create!(name: "cash")
+PaymentType.create!(name: "check")
