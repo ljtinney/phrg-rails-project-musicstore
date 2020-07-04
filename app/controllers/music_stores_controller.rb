@@ -22,19 +22,7 @@ class MusicStoresController < ApplicationController
 
   def show
     @music_store = MusicStore.find(params[:id])
-    @store_geets = @music_store.instruments.find(params[:id])
   end
-
-  # def guitar_traits
-  #   (
-  #     :instrument_type,
-  #     :name,
-  #     :make,
-  #     :model,
-  #     :color,
-  #     :year_made
-  #   )
-  # end
 
 private
 

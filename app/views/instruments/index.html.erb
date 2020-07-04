@@ -1,13 +1,11 @@
 <h1> instruments#index <h1>
 
 <% @instruments.each do |instrument| %>
+  <h6> To learn more about the instrument, visit the instrument's music store link!</h6>
   <h4> Instrument Type: <%= instrument.instrument_type %> </h4>
   <h4> Instrument Make: <%= instrument.make %> </h4>
-  <h4> Instrument Name: <%= instrument.name %> </h4>
   <h4> Instrument Model: <%= instrument.model %> </h4>
-  <h4> Instrument Color: <%= instrument.color %> </h4>
-  <h4> Instrument Year Made: <%= instrument.year_made %> </h4>
   <h4> Instrument Location: <%= link_to instrument.music_store.name, music_store_path(instrument.music_store) %> </h4>
   <br>
-  <br>
 <% end %>
+<%= link_to "Log Out", logout_path %>

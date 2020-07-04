@@ -1,8 +1,8 @@
-<h1>Music Stores, baby...</h1>
+<h1>Music Stores, baby...MusicStore#show View</h1>
 
 <h3>Music Store: <%= @music_store.name %> </h3>
 <p> Music Store Address: <%= @music_store.address %> </p>
-<p>Music Store Instruments:</p>
+<p>Instruments In Stock At <%= @music_store.name %> </p>
 <ul>
   <% @music_store.instruments.each do |geet| %>
     <li>
@@ -17,4 +17,5 @@
     </li>
     </li>
   <% end %>
+  <%= link_to "Log Out", logout_path %>
 </ul>
