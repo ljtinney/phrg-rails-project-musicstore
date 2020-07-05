@@ -5,27 +5,11 @@
 
   <%= "#{@instrument.year_made}" " #{@instrument.make}" " #{@instrument.name}" " #{@instrument.model}" " in " "#{@instrument.color}"%><h5>
   <h5> Please provide select your payment type(s)</h5>
-
-  <%#= check_box_tag "credit", "no",false, class: "credit" %>
-  Credit
-  <br>
-  <%#= check_box_tag "debit", "no",false, class: "name" %>
-  Debit
-  <br>
-  <%#= check_box_tag "cash", "no",false, class: "name" %>
-  Cash
-  <br>
-  <%#= check_box_tag "check", "no",false, class: "name" %>
-  Check
   <br>
   <br>
-    <%#= link_to "Finalize Purchase", instrument_purchase_path(@instrument, @purchase)%>
-
-<%= form_for([@instrument, @purchase], url: instrument_purchases_path) do |f| %>
-
+  <%= form_for([@instrument, @purchase], url: instrument_purchases_path) do |f| %>
   <%= f.label :payment_type %>
-  <%= f.collection_select :payment_type, PaymentType.order(:name),:id,:name, include_blank: true %>
-
+  <%= f.collection_select :payment_type, PaymentType.order(:name),:id,:name, include_blank: false %>
   <%= f.submit %>
 <% end %>
   <br>
