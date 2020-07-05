@@ -1,3 +1,10 @@
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+  <% end %>
+
+
 <h1>Thank you <%= "#{@customer.name}!" %> </h1>
 <h2>Please click "continue" to see the inventory</h2>
 <%= link_to "Continue", instruments_path %>
