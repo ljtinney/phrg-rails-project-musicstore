@@ -1,24 +1,39 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app is a simulation for purchasing musical instruments.
+Once registered & signed in, you will have access to shop for musical instruments from a few different music stores.
+After reviewing basic information on the available instruments, you will be able to purchase the instrument(s) with a currency of your choosing.
 
-Things you may want to cover:
+## Install Guide
 
-* Ruby version
+### Clone the repository
+```shell
+git clone git@github.com:ljtinney/phrg-rails-project-musicstore.git
+cd /phrg-rails-project-musicstore
+```
 
-* System dependencies
+### Install dependencies
 
-* Configuration
+Using [Bundler](https://github.com/bundler/bundler)
 
-* Database creation
+```shell
+bundle install
+```
 
-* Database initialization
+### Initialize the database
 
-* How to run the test suite
+```shell
+rails db:migrate
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+### Initialize the database
 
-* Deployment instructions
+```shell
+rails db:seed
+```
 
-* ...
+## Start a local server
+
+```shell
+rails s
+```
