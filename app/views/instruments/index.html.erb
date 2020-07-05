@@ -8,4 +8,14 @@
   <h4> Instrument Location: <%= link_to instrument.music_store.name, music_store_path(instrument.music_store) %> </h4>
   <br>
 <% end %>
+
+
+<h3>Instruments with VINTAGE STATUS (Where the Instrument was made before 1980) </h3>
+
+  <% @instruments_ratings.each do |instrument| %>
+    <%= instrument.year_made %><br>
+  <% end %>
+
+<br>
+<br>
 <%= link_to "Log Out", logout_path %>

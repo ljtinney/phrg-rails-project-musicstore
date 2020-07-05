@@ -3,7 +3,8 @@ class InstrumentsController < ApplicationController
 
   def index
     @instruments = Instrument.all
-    # @customer = current_user
+    @customer = current_user
+    @instruments_ratings = Instrument.rating
   end
 
   def show
