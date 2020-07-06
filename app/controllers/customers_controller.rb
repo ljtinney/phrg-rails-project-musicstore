@@ -9,9 +9,9 @@ class CustomersController < ApplicationController
   def create
     @customer = Customer.new(user_params)
     if @customer.save
-      redirect_to @customer
+      redirect_to @customer, notice: "Thanks for creating a login name, please sign in"
     else
-      render :new
+      render :new, notice: "Name & Password do not match. Please try again"
     end
   end
 
