@@ -36,8 +36,4 @@ rails db:seed
 
 ```shell
 rails s
-<<<<<<< HEAD
 ```
-=======
-```
->>>>>>> 975c3d5a4d05a8e075b3c87bc031e7ec06f247c1
