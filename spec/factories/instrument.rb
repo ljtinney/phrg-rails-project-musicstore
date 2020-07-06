@@ -5,6 +5,7 @@ FactoryBot.define do
     make { "Fender" }
     model { "Telecaster" }
     color { "Spotted Atrocious Purple" }
-    year_made { "1992" }
+    year_made { 1992 }
+    music_store
   end
 end

@@ -1,4 +1,3 @@
-
 # Liam = Customer.create!(name: "Liam "Tinney", Mav828", password: "password", password_digest: "password")
 
 Customer.create!(name: "Conan O'Brien", password: "password", password_digest: "password")
@@ -8,7 +7,7 @@ Customer.create!(name: "Brian May", password: "password", password_digest: "pass
 Customer.create!(name: "Jeff Buckley", password: "password", password_digest: "password")
 Customer.create!(name: "Bruce Springsteen", password: "password", password_digest: "password")
 Customer.create!(name: "Emma Roberts", password: "password", password_digest: "password")
-Customer.create!(name: "April O'Neil",  password: "password", password_digest: "password")
+Customer.create!(name: "April O'Neil", password: "password", password_digest: "password")
 Customer.create!(name: "Keith Richards", password: "password", password_digest: "password")
 Customer.create!(name: "Alex D'Addario", password: "password", password_digest: "password")
 Customer.create!(name: "Seth Rogen", password: "password", password_digest: "password")

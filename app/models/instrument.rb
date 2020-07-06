@@ -4,6 +4,5 @@ class Instrument < ApplicationRecord
 
   scope :rating, -> { where("year_made < 1979") }
 
-  validates :name, presence: true
-  validates :year_made, presence: true
+  validates :name, :year_made, presence: true
 end

@@ -1,10 +1,8 @@
-<h1>MusicStore#show View</h1>
-
 <h3>Music Store: <%= @music_store.name %> </h3>
 <p> Music Store Address: <%= @music_store.address %> </p>
 <p>Instruments In Stock At <%= @music_store.name %> </p>
 <ul>
-  <% @store_geets.each do |instrument| %>
+  <% @instruments.each do |instrument| %>
     <li>
       <%= instrument.instrument_type %><br>
       <%= instrument.year_made %><br>

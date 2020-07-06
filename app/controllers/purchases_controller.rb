@@ -16,9 +16,12 @@ class PurchasesController < ApplicationController
 
   def create
     @purchase = Purchase.new(purchase_params)
+    @purchase.instrument = @instrument
+    @purchase.customer_id = session[:user_id]
     if @purchase.save
-      redirect_to @purchase
+      redirect_to customer_path(session[:user_id])
     else
+      # render error messages
       render :show
     end
   end
@@ -37,9 +40,6 @@ private
     params.require(:purchase)
           .permit(
             :music_store_id,
-            :instrument_id,
-            :customer_id,
-            :cost,
             :payment_type
           )
   end
