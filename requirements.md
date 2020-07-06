@@ -34,20 +34,34 @@ Requirements:
 
 - [x] Includes signup, login and logout functionality (e.g. Devise)
 
-- [ ] Includes nested resource show or index (e.g. users/2/recipes)
+- [x] Includes nested resource show or index (e.g. users/2/recipes)
+       /instruments/:instrument_id/purchases
+       /instruments/:instrument_id/purchases/new
 
-- [ ] Includes nested resource form (recipes/1/ingredients/new)
-- [ ] Includes form display of validation errors
-- [ ] Includes Unit tests all of your models
-- [ ] Includes at least one type of Integration test (e.g. controller, request, feature, system)
-- [ ] Use FactoryBot to build instances of your models in your tests
-- [ ] Conforms to Nitro Ruby linting rules (running `rubocop` returns 0 offenses)
-- [ ] Includes a `README.md` with an application description and installation guide
+- [x] Includes nested resource form (recipes/1/ingredients/new)
+      /instruments/:instrument_id/purchases/new
+
+- [x] Includes form display of validation errors
+       /customers/new
+        /signin
+
+- [x] Includes Unit tests all of your models
+
+
+- [x] Includes at least one type of Integration test (e.g. controller, request, feature, system)
+      instruments_controller_spec.rb
+      music_stores_controller_spec.rb
+
+- [x] Use FactoryBot to build instances of your models in your tests
+
+- [x] Conforms to Nitro Ruby linting rules (running `rubocop` returns 0 offenses)
+
+- [x] Includes a `README.md` with an application description and installation guide
 
 Confirm:
-- [ ] The application is pretty DRY
-- [ ] Limited logic in controllers
-- [ ] Views use helper methods if appropriate
-- [ ] Views use partials if appropriate
+- [x] The application is pretty DRY
+- [x] Limited logic in controllers
+- [x] Views use helper methods if appropriate
+- [x] Views use partials if appropriate
 
 If you've added any additional functionality to your application that you'd like to demonstrate, please describe it below:
