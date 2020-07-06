@@ -16,22 +16,13 @@ RSpec.describe Instrument, :type => :model do
     end
   end
 
-  describe "is valid" do
-    it "without an instrument type" do
-      expect(build :instrument, instrument_type: nil).to be_valid
-    end
+  it "is valid", :aggregate_failures do
+    expect(build :instrument, instrument_type: nil).to be_valid
 
-    it "without an instrument make" do
-      expect(build :instrument, make: nil).to be_valid
-    end
+    expect(build :instrument, make: nil).to be_valid
+    expect(build :instrument, model: nil).to be_valid
+    expect(build :instrument, color: nil).to be_valid
 
-    it "without an instrument model" do
-      expect(build :instrument, model: nil).to be_valid
-    end
-
-    it "without an instrument color" do
-     expect(build :instrument, color: nil).to be_valid
-    end
   end
 
   it "has a valid factory" do

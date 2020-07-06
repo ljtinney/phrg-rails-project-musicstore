@@ -22,10 +22,7 @@ class MusicStoresController < ApplicationController
 
   def show
     @music_store = MusicStore.find(params[:id])
-    instrument_ids_for_store = @music_store.instruments.pluck(:id)
-    purchased_instrument_ids_from_store = Purchase.where(music_store: @music_store).pluck(:instrument_id)
-
-    @instruments = Instrument.where(id: instrument_ids_for_store - purchased_instrument_ids_from_store)
+    @instruments = Instrument.available(@music_store)
   end
 
 private
